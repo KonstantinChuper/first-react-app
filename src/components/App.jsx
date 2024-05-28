@@ -1,12 +1,12 @@
-import Test from "./Test";
-import Header from "./Header";
-import MainContent from "./MainContent";
+import List from "./List";
+import Rating from "./Rating";
+import "./styles.css";
+
 function App() {
   return (
     <div>
-      <Test />
-      <Header />
-      <MainContent />
+      < Rating />
+      < List />
     </div>
   );
 }

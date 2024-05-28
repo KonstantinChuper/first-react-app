@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.ratingHeader {
+  font-size: 55px;
+  color: #468ccf;
+}
+.ratingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ratingImg {
+  margin: 20px;
+  height: 150px;
+}
+.ratingButton {
+  font-family: arial;
+  color: #ffffff;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #7cacde;
+  box-shadow: 1px 1px 1px #bee2f9;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #3866a3;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+  cursor: pointer;
+  margin: 10px;
+  width: 130px;
+}
+.ratingButton:hover {
+  color: #14396a;
+  background: #468ccf;
+  background: linear-gradient(to top, #468ccf, #63b8ee);
+}
+p {
+    width: 30vw;
+}
+h2 {
+    padding-bottom: 30px;
+}
+.peopleListContainer {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 50vw;
+}
+.peopleList {
+    list-style: none;
+}
+.peopleListelement {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #bee2f9;
+}
+.listButton {
+  font-family: arial;
+  color: #ffffff;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #7cacde;
+  box-shadow: 1px 1px 1px #bee2f9;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #3866a3;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+  cursor: pointer;
+}
+.listButton:hover {
+  color: #14396a;
+  background: #468ccf;
+  background: linear-gradient(to top, #468ccf, #63b8ee);
+}
