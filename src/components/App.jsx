@@ -11,7 +11,7 @@ function App() {
     setSelectedCityIndex(e.target.value);
   };
   return (
-    <div>
+    <div className="container">
       <h1>Europian Cities Tour</h1>
       <CitySelector handleCityChange={handleCityChange} selectedCityIndex={selectedCityIndex} />
       <CityCard city={selectedCity} />
