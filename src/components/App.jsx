@@ -1,10 +1,12 @@
-import NoteForm from "./NoteForm";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
 import "./styles.css";
 
 function App() {
   return (
     <div>
-      <NoteForm/>
+      <Header />
+      <Main />
     </div>
   );
 }

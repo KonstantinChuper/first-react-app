@@ -1,0 +1,70 @@
+.hero_section {
+  padding-left: 100px;
+  padding-bottom: 295px;
+  background-color: #cde7ff;
+  position: relative;
+}
+.hero_header {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000d9;
+  padding-top: 130px;
+}
+.search_bar {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 70%;
+}
+.search_bar_company {
+  padding: 43px 10px 43px 20px;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  border: none;
+  position: relative;
+}
+.search_bar_company::after {
+  content: "";
+  border: 1px solid black;
+}
+.search_bar_city {
+  padding: 43px 10px 43px 20px;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  border: none;
+}
+.search_bar_city:focus {
+  border: none;
+}
+.button {
+  width: 25%;
+  padding: 41px 0;
+  border: none;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #274059;
+  color: #fff;
+}
+.form_span {
+  height: 20px;
+  border: 1px solid silver;
+  background-color: #fff;
+}
+.icon {
+  padding-left: 30px;
+}
+.background {
+  position: absolute;
+  width: 1020px;
+  height: 540px;
+  right: -155px;
+  bottom: -110px;
+}

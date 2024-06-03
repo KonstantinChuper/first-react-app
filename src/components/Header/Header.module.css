@@ -1,0 +1,56 @@
+.header {
+  background-color: #cde7ff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.logo_container {
+  display: flex;
+  gap: 109px;
+  align-items: center;
+}
+.logo {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: Red Hat Display;
+  font-size: 30px;
+  color: #274059;
+}
+.find_job_container {
+  display: flex;
+  gap: 53px;
+}
+.find_job {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000CC;
+}
+.find_job:hover {
+  text-decoration: underline;
+}
+.reg_container {
+  display: flex;
+  gap: 39px;
+  align-items: center;
+}
+.reg {
+font-size: 15px;
+font-weight: 400;
+text-decoration: none;
+color: #000000D9;
+}
+.reg:hover {
+  text-decoration: underline;
+}
+.sign_button {
+  padding: 13px 14px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.sign_button:hover {
+  background-color: rgba(255, 255, 255, 0.885);
+}
