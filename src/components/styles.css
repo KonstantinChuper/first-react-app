@@ -31,9 +31,11 @@ body {
   border: 3px solid #1ED760;
   border-radius: 65px;
   padding: 36px 56px;
-  width: 30%;
+  width: 446px;
 }
 .spotify-link:hover {
   transform: translateY(-10px);
-  fill: #ff0000;
+}
+.spotify-link-logo:hover path  {
+    fill: #1181F1;
 }
