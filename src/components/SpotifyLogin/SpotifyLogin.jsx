@@ -1,7 +1,4 @@
 import React from "react";
-import AppleLogo from "../../assets/AppleLogo.svg";
-import GoogleLogo from "../../assets/GoogleLogo.svg";
-import XLogo from "../../assets/XLogo.svg";
 import SpotifyLogo from "../../assets/SpotifyLogo.svg";
 
 export default function SpotifyLogin() {
