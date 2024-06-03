@@ -1,10 +1,10 @@
-import NoteForm from "./NoteForm";
+import SpotifyLogin from "./SpotifyLogin/SpotifyLogin";
 import "./styles.css";
 
 function App() {
   return (
     <div>
-      <NoteForm/>
+      <SpotifyLogin/>
     </div>
   );
 }

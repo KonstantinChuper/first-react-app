@@ -4,5 +4,36 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
+  background-color: black;
+  color: #1ed760;
+}
+.spotify-logo-container {
+  padding: 55px 0 0 35px;
+}
+.spotify-header {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 112px;
+}
+.spotify-text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 32px;
+}
+.spotify-links-container {
+  margin: 31px auto;
+  display: flex;
+  gap: 15px;
+  border: 3px solid #1ED760;
+  border-radius: 65px;
+  padding: 36px 56px;
+  width: 30%;
+}
+.spotify-link:hover {
+  transform: translateY(-10px);
+  fill: #ff0000;
 }
