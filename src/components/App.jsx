@@ -1,10 +1,9 @@
-import NoteForm from "./NoteForm";
 import "./styles.css";
 
 function App() {
   return (
     <div>
-      <NoteForm/>
+      Hello
     </div>
   );
 }
