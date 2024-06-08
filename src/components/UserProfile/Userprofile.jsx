@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 
 export default function UserProfile() {
   const [userData, setUserData] = useState(null);
-  const API = "https://randomuser.me/api/";
+  const API_URL = "https://randomuser.me/api/";
 
   async function fetchData() {
     try {
-      const response = await Axios.get(API);
+      const response = await Axios.get(API_URL);
+      console.log(response);
       setUserData(response.data.results[0]);
     } catch (err) {
       console.error(`Возникла ошибка: ${err}`);
@@ -17,8 +18,6 @@ export default function UserProfile() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  console.log(userData);
 
   return (
     <div className="container">
