@@ -8,21 +8,29 @@ export default function UserProfile() {
   async function fetchData() {
     try {
       const response = await Axios.get(API);
-      setUserData(response.data.results[0]);
+      setUserData(response.data.results);
     } catch (err) {
       console.error(`Возникла ошибка: ${err}`);
     }
-  }
 
+    // Axios
+    // .get(API)
+    // .then((responce) => {
+    //   console.log(responce.data.results);
+    //   setUserData(responce.data.results);
+    // })
+    // .catch((err) => {
+    //     console.error(err);
+    // })
+  }
   useEffect(() => {
     fetchData();
   }, []);
 
   console.log(userData);
-
   return (
     <div className="container">
-      {userData ? (
+      {/* {userData ? (
         <div className="profile-container">
           <img src={userData.picture.large} alt="Foto" />
           <h1>
@@ -34,7 +42,7 @@ export default function UserProfile() {
       ) : (
         <p>Loading...</p>
       )}
-      <button onClick={fetchData}>Show new user</button>
+      <button onClick={fetchData}>Show new user</button> */}
     </div>
   );
 }
