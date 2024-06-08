@@ -4,5 +4,42 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #183000;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #397100;
+  object-fit: fill;
+}
+.container {
+  background-color: chartreuse;
+  width: 60%;
+  height: 550px;
+  margin: 100px auto;
+  gap: 50px;
+  padding: 50px;
+  align-items: center;
+  gap: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+button {
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 15px;
+  width: 150px;
+  border: none;
+  background-color: #ebebeb;
+  cursor: pointer;
 }

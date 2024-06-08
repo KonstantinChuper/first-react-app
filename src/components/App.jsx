@@ -1,10 +1,10 @@
-import Timer from "./Timer";
+import Userprofile from "./UserProfile/Userprofile";
 import "./styles.css";
 
 function App() {
   return (
     <div>
-      <Timer/>
+      <Userprofile />
     </div>
   );
 }
