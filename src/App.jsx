@@ -1,6 +1,11 @@
+import BlogSettingsProvider from "./BlogSettingsProvider";
 import "./styles.css";
-import TodosProvider from "./TodosProvider";
 
 export default function App() {
-  return <TodosProvider />;
+  // 5. Добавить всё сюда, провайдер, внутри SettingsPanel and Article
+  return (
+    < div className="App">
+      < BlogSettingsProvider />
+    </div>
+  );
 }
