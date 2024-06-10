@@ -1,12 +1,9 @@
 // 3. Компонент с 2 списками (select). Один для выбора размера шрифта, один для line-height
 import React from "react";
 import { useBlogSettingsContext } from "./BlogSettingsContext";
-import Article from "./Article";
 
 export default function SettingsPanel() {
-
   const context = useBlogSettingsContext();
-  console.log(context);
 
   function handleFontChange(e) {
     context.setFont(e.target.value);
@@ -30,12 +27,11 @@ export default function SettingsPanel() {
       <label htmlFor="lineHeight">
         Select line-height{" "}
         <select name="lineHeight" id="lineHeight" onChange={handleLineHeightChange}>
-          <option value={'1'}>1</option>
-          <option value={'1.5'}>1.5</option>
-          <option value={'2'}>2</option>
+          <option value={"1"}>1</option>
+          <option value={"1.5"}>1.5</option>
+          <option value={"2"}>2</option>
         </select>
       </label>
-      <Article />
     </div>
   );
 }
