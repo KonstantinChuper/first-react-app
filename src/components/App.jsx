@@ -1,4 +1,3 @@
-import React from "react";
 import { LanguageProvider } from "./LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TextComponent from "./TextComponent";
