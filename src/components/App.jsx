@@ -1,12 +1,16 @@
-import Timer from "./Timer";
+import React from "react";
+import { LanguageProvider } from "./LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
+import TextComponent from "./TextComponent";
 import "./styles.css";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Timer/>
-    </div>
+    <LanguageProvider>
+      <div className="app">
+        <LanguageSwitcher />
+        <TextComponent />
+      </div>
+    </LanguageProvider>
   );
 }
-
-export default App;
