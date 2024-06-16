@@ -1,11 +1,11 @@
-import Timer from "./Timer";
+import ListItem from "./ListItem";
 import "./styles.css";
 
 function App() {
   return (
-    <div>
-      <Timer/>
-    </div>
+    <>
+      <ListItem />
+    </>
   );
 }
 
