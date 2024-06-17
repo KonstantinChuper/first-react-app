@@ -1,10 +1,10 @@
-import ListItem from "./ListItem";
+import ToDoList from "./ToDoList";
 import "./styles.css";
 
 function App() {
   return (
     <>
-      <ListItem />
+      <ToDoList />
     </>
   );
 }
