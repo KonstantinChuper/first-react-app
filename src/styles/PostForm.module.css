@@ -1,0 +1,67 @@
+.header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.88px;
+  text-align: center;
+  padding-top: 60px;
+}
+.postList {
+  background-color: #7d9fff;
+  border: 1px solid #5ecfff;
+  width: 507px;
+}
+.form {
+  border-radius: 20px;
+  background-color: #3f5cc0cc;
+  display: flex;
+  gap: 20px;
+  margin: 124px 42px;
+  padding: 30px;
+}
+.logo {
+  width: 42px;
+  height: 42px;
+}
+.formGroup {
+  background-color: #21322e21;
+  padding: 30px 26px 30px 12px;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: end;
+}
+.postFormError {
+  color: crimson;
+  text-align: end;
+}
+.postFormSuccess {
+  color: rgb(144, 255, 144);
+  text-align: end;
+}
+.formInput {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  color: #00000075;
+}
+.formInput input {
+  width: 100%;
+}
+.formInput textarea {
+  width: 100%;
+}
+.postFormButton {
+  width: 142px;
+  height: 37px;
+  text-align: center;
+  background-color: #0d3d3066;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  border: none;
+  cursor: pointer;
+}

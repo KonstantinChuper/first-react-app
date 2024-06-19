@@ -1,0 +1,29 @@
+.space {
+  width: 1px;
+  height: 1px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 38px 130px;
+  background-color: #3f5cc0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.link {
+  text-decoration: none;
+  color: #090808cc;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+}
+.divider {
+    background-color: #00000033;
+    width: 1px;
+    height: 38px;
+
+}
