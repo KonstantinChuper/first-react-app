@@ -8,8 +8,7 @@ export default function ValueDisplay({ value }) {
   }, [value]);
 
   const prevValue = prevValueRef.current;
-console.log('value' + ' ' + value);
-console.log('preValue' + ' ' + prevValue);
+
   return (
     <div>
       <p>Current Value: {value}</p>
