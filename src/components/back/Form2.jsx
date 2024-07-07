@@ -1,20 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function FormItem({ addTask }) {
+export default function Form2({ addItem }) {
   const [inputValue, setInputValue] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     if (inputValue !== "") {
-      addTask(inputValue);
-      setInputValue("");
+      addItem(inputValue);
     }
+    setInputValue("");
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-      <button type="submit">Add Task</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
