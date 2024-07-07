@@ -20,15 +20,15 @@ const UserForm = ({ form, setUserInfo, updateForm }) => {
     const { name, value } = e.target;
     updateForm({ [name]: value });
   };
-
+  
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Edit User Info</h2>
       <div>
         <label>Name:</label> <input type="text" name="name" value={form.name} onChange={handleChange} />
       </div>
       <div>
-        <label>Status:</label>
-        {" "}
+        <label>Status:</label>{" "}
         <select name="status" value={form.status} onChange={handleChange}>
           <option value="">Select status</option>
           <option value="online">online</option>
