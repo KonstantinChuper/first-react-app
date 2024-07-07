@@ -1,16 +1,17 @@
 import React from "react";
-import Filter from "./components/Filter";
-import UserList from "./components/UserList";
-import "./styles.css";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import User from "./components/User";
+import UserForm from "./components/UserForm";
 
-function App() {
-  return (
+const App = () => (
+  <Provider store={store}>
     <div className="container">
-      <h1>User Filter App</h1>
-      <Filter />
-      <UserList />
+      <h1>User Profile</h1>
+      <User />
+      <UserForm />
     </div>
-  );
-}
+  </Provider>
+);
 
 export default App;

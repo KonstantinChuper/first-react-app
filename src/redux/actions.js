@@ -1,4 +1,6 @@
-export const setFilter = (filter) => ({
-  type: "SET_FILTER",
-  payload: filter,
+export const SET_USER_INFO = "SET_USER_INFO";
+
+export const setUserInfo = (userInfo) => ({
+  type: SET_USER_INFO,
+  payload: userInfo,
 });

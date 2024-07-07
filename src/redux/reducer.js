@@ -1,23 +1,20 @@
+import { SET_USER_INFO } from "./actions";
+
 const initialState = {
-  users: [
-    { id: 1, name: "Johny Depp" },
-    { id: 2, name: "Jane Smith" },
-    { id: 3, name: "Alice Johnson" },
-    { id: 4, name: "Jackie Chan" },
-  ],
-  filter: "",
+  name: "",
+  status: "",
 };
 
-function reducer(state = initialState, action) {
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_FILTER":
+    case SET_USER_INFO:
       return {
         ...state,
-        filter: action.payload,
+        ...action.payload,
       };
     default:
       return state;
   }
-}
+};
 
-export default reducer;
+export default rootReducer;
