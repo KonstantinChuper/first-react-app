@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import User from "./components/User";
 import UserForm from "./components/UserForm";
+import "./styles.css"
 
 const App = () => (
   <Provider store={store}>

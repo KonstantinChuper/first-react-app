@@ -5,8 +5,7 @@
 }
 body {
   font-family: sans-serif;
-  background: rgb(238, 174, 202);
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 233, 189, 1) 100%);
+  background: radial-gradient(circle, #94bccd 0%, #81ccab 100%);
 }
 h1 {
   padding-bottom: 15px;
@@ -18,4 +17,20 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+.status{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+form {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+select {
+  width: 75%;
 }
