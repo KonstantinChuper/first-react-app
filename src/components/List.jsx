@@ -3,7 +3,7 @@ import FormItem from "./FormItem";
 
 export default function List() {
   const [listItems, setListItems] = useState([]);
-
+  
   const addItem = (text) => {
     const newItem = {
       id: Date.now(),
@@ -50,8 +50,7 @@ export default function List() {
                   />
                   <div class="cr-input"></div>
                   <span
-                    style={{ textDecoration: item.isChecked ? "line-through" : "none", color: item.isChecked ? "#bab6b6" : "black" }}
-                  >
+                    style={{ textDecoration: item.isChecked ? "line-through" : "none", color: item.isChecked ? "#bab6b6" : "black" }}>
                     {item.text}
                   </span>
                 </label>

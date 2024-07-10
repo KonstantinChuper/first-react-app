@@ -12,15 +12,18 @@ export default function FormItem({ addItem }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="add-item-input-form" onSubmit={handleSubmit}>
       <input
+        className="add-item-input"
         type="text"
         value={inputValue}
         onChange={(e) => {
           setInputValue(e.target.value);
         }}
       />
-      <button type="submit">Submit</button>
+      <button className="add-item-btn" type="submit">
+        Add
+      </button>
     </form>
   );
 }
