@@ -1,50 +1,56 @@
-import React, { useCallback, useMemo, useState } from "react";
-import UserList from "./components/UserList";
-import { users } from "./api/users";
-import { Stack } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Container,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@mui/material";
 import "./styles.css";
 
 export default function App() {
-  const [filter, setFilter] = useState("");
-  const [select, setSelect] = useState("name");
+const [open, setOpen] = useState(false);
 
-  const filterUsers = useCallback(
-    (filterText) => {
-      return users.filter((user) => {
-        const field = user[select];
-        return String(field).toLowerCase().includes(filterText.toLowerCase());
-      });
-    },
-    [select]
-  );
+const handleClick = () => {
+  open === false ? setOpen(true) : setOpen(false);
+};
 
-  const filteredUsers = useMemo(() => filterUsers(filter), [filter, filterUsers]);
-
-  return (
-    <Stack direction="column" justifyContent="center" alignItems="center" spacing={4} sx={{ marginTop: "20px" }}>
-      <FormControl sx={{ width: "250px" }}>
-        <InputLabel>Search Parameter</InputLabel>
-        <Select value={select} label="Search Parameter" onChange={(e) => setSelect(e.target.value)}>
-          <MenuItem value={"name"}>Name</MenuItem>
-          <MenuItem value={"age"}>Age</MenuItem>
-          <MenuItem value={"email"}>Email</MenuItem>
-        </Select>
-      </FormControl>
-      <TextField
-        id="outlined-basic"
-        variant="outlined"
-        type="text"
-        placeholder={`Filter by ${select}`}
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        style={{ marginTop: "10px", width: "250px" }}
-      />
-      <UserList users={filteredUsers} />
-    </Stack>
-  );
+return (
+  <div>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6">My App</Typography>
+      </Toolbar>
+    </AppBar>
+    <Container>
+      <Typography variant="h4" style={{ marginTop: "20px" }}>
+        Welcome to My App!
+      </Typography>
+      <Button variant="contained" color="primary" onClick={handleClick} style={{ marginTop: "20px" }}>
+        Open Dialog
+      </Button>
+      <Dialog open={open}>
+        <DialogTitle>{"Use Material UI?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            It's a simple App which using Material UI. You can set it according to your preferences.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClick} color="primary">
+            Disagree
+          </Button>
+          <Button onClick={handleClick} color="primary" autoFocus>
+            Agree
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </Container>
+  </div>
+);
 }
