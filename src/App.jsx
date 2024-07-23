@@ -1,54 +1,61 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Card, Typography } from 'antd';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Button, Typography } from '@mui/material';
+import styled from '@emotion/styled';
 
-const { Title } = Typography;
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#1976d2',
+    },
+    background: {
+      default: '#ffffff',
+    },
+  },
+});
 
-const App = () => {
-  const [form] = Form.useForm();
-  const [submittedData, setSubmittedData] = useState(null);
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#90caf9',
+    },
+    background: {
+      default: '#121212',
+    },
+  },
+});
 
-  const onFinish = (values) => {
-    setSubmittedData(values);
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+  borderRadius: '8px',
+  marginTop: '20px',
+}));
+
+export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <div style={{ padding: '50px' }}>
-      <Title level={2}>Simple Form with Ant Design</Title>
-      <Form
-        form={form}
-        layout="vertical"
-        onFinish={onFinish}
-        style={{ maxWidth: '400px', marginBottom: '20px' }}
-      >
-        <Form.Item
-          name="name"
-          label="Name"
-          rules={[{ required: true, message: 'Please input your name!' }]}
-        >
-          <Input placeholder="Enter your name" />
-        </Form.Item>
-        <Form.Item
-          name="description"
-          label="Description"
-          rules={[{ required: true, message: 'Please input a description!' }]}
-        >
-          <Input.TextArea placeholder="Enter a description" />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
-
-      {submittedData && (
-        <Card title="Submitted Data" style={{ maxWidth: '400px' }}>
-          <p><strong>Name:</strong> {submittedData.name}</p>
-          <p><strong>Description:</strong> {submittedData.description}</p>
-        </Card>
-      )}
-    </div>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <div style={{ padding: '20px', textAlign: 'center' }}>
+        <Typography variant="h4" gutterBottom>
+          {isDarkMode ? 'Dark Theme' : 'Light Theme'}
+        </Typography>
+        <StyledButton variant="contained" onClick={toggleTheme}>
+          Toggle Theme
+        </StyledButton>
+      </div>
+    </ThemeProvider>
   );
 };
-
-export default App;
