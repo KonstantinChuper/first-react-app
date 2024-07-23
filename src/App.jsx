@@ -3,7 +3,7 @@ import { Form, Input, Button, Card, Typography } from 'antd';
 
 const { Title } = Typography;
 
-const App = () => {
+export default function App()  {
   const [form] = Form.useForm();
   const [submittedData, setSubmittedData] = useState(null);
 
@@ -50,5 +50,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
