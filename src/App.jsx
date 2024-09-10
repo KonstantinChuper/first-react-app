@@ -1,15 +1,12 @@
-import UserList from "./components/UserList";
-import "./styles.css";
 import React from "react";
+import "./styles.css";
+import Quote from "./components/Quote";
 
-
-function App() {
-
+export default function App() {
   return (
-    <div>
-      <UserList />
+    <div className="container">
+      <h1 style={{ color: "red" }}>Random Quotes</h1>
+      <Quote />
     </div>
   );
 }
-
-export default App;
